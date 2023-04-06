@@ -5,9 +5,8 @@ import axios from 'axios'
 import { useReducer } from "react";
 import { themes } from "./themes";
 import { componentThemes } from "./themes";
-import { themeSwitchReducer } from "./themeSwitchReducer.jsx";
+import { themeSwitchReducer } from "./themeSwitchReducer";
 import { form } from "./themes";
-
 
 const ContextGlobal = createContext()
 
@@ -33,7 +32,7 @@ const Context = ({ children }) => {
       setDatos(res.data)
   }
   axiosData()
-  }, [])
+  }, [url])
 
   return (
     <ContextGlobal.Provider 

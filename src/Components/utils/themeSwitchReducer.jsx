@@ -13,4 +13,4 @@ export const themeSwitchReducer = (state, action) => {
             throw new Error()
         }
     }
-  }
+}
