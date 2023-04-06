@@ -6,35 +6,54 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+span{
+  color: #990000;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
-  width: 100%;
   cursor: pointer;
+  margin: .5rem;
 }
+.deleteButton{
+  padding: 11px;
+  border: none;
+  cursor: pointer;
+  margin: .5rem;
+}
+
 
 h1{
   text-align: center;
 }
-
+.switch{
+  margin: auto;
+  padding: .5rem;
+  border-radius: 30%; 
+}
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F3EFE0;
+}
+.nav{
+  display: flex;
   padding: 1rem;
+
 }
 
 a{
   color: #000;
   text-decoration: none;
-  margin: 5px;
+  margin: 20px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 a:hover{
   color: rgb(136, 136, 136);
@@ -42,42 +61,92 @@ a:hover{
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   padding: 2rem;
   position: relative;
-  bottom: 0;
-  width: 90%;
+  bottom: 0px;
   height: 40px;
   margin-top: 2rem;
+  background-color: #F3EFE0;
+  align-items: center;
 }
-
+.icons svg{
+  font-size: 1.2rem;
+  padding: .5rem;
+}
 footer > img{
   width: 200px;
   margin: 0;
 }
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
+.contact h2,p{
+  text-align: center;
+  margin: 1rem;
 }
-
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
+form {
+  background: #FEFCF3;
+  max-width: 250px;
+  margin: auto;
+  padding: 45px;
+  box-shadow: 0 0 20px 0 #F3EFE0, 0 5px 5px 0 #F3EFE0;
+}
+form input {
+  background: #F3EFE0;
+  width: 100%;
+  border: 0;
+  margin: 1rem 0 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #C8C6C6;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: black;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+}
+form button:hover{
+  background: #73777B;
+}
+form p{
+  font-size: .8rem;
+  margin: 0 0 .5rem 0;
+  text-align: start;
+  color: #990000;
 }
 
 .card{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+}
+.homeCard .deleteButton{
+  display: none;
+}
+.cardBox{
+  display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  margin: 0;
+}
+.cardBox p{
+  font-size: 1rem;
+  margin: 0;
+  padding: .4rem;
+}
+.cardBox img{
+  width: 100%;
 }
 
 .card:hover{
@@ -104,7 +173,7 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #bdbdbd;
   text-align: left;
   padding: 8px;
 }
@@ -112,11 +181,6 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-
-.dark{
-  background-color: #12121296;
-  color: white;
-}
-.dark > a {
-  color: white;
+.favCard .favButton{
+  display: none;
 }
